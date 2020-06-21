@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect } from 'react-router';
-import { isAuthenticatedSelector } from '../../services/AuthService/redux/selectors/authSelectors';
+// import { isAuthenticatedSelector } from '../../services/AuthService/redux/selectors/authSelectors';
 import { SIGN_IN_PAGE } from '../paths';
-import { store } from '../store';
+// import { store } from '../store';
 
 /**
  * Example guardian guarding route.
@@ -12,10 +12,10 @@ import { store } from '../store';
  * https://www.thegreatcodeadventure.com/jwt-auth-with-phoenix-and-react-router-4/
  */
 export function isAuthenticated(component: JSX.Element) {
-  const state = store.getState();
-  const isAuthenticated = isAuthenticatedSelector(state);
+  // const state = store.getState();
+  // const isAuthenticated = isAuthenticatedSelector(state);
 
-  if (isAuthenticated) {
+  if (true) {
     return component;
   } else {
     return <Redirect to={SIGN_IN_PAGE} />;
